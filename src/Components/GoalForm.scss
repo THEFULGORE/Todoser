@@ -1,0 +1,120 @@
+.goalform {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    width: 25rem;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1rem;
+    background: #FF7179;
+    background: linear-gradient(270deg, rgba(255, 113, 121, 1) 0%, rgba(64, 16, 106, 1) 50%);
+    box-shadow: 0 0 1rem rgba(black, 0.5);
+    &__checkbox {
+        display: inherit;
+    }
+    &__radio__input {
+    }
+    &__text {
+        margin: 0;
+        word-break: break-all;
+        text-align: left;
+    }
+    &__edit {
+        font-family: 'Poppins';
+        font-weight: 500;
+        width: 17rem;
+        height: 1.25rem;
+        padding: 0.5rem;
+        font-size: 500;
+        background-color: transparent;
+        border:0.15rem solid #FF7179;
+        box-shadow: 0 0 1rem rgba(black, 0.5);
+        outline: none;
+        color: white;
+        border-radius: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    &__complete {
+        text-decoration: line-through;
+        text-decoration-color: white;
+        text-decoration-thickness: 2px;
+        color: rgb(170, 170, 170);
+    }
+    &__btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        :hover {
+            background-color: #FF7179;
+        }
+    }
+    &__btn-remove {
+        cursor: pointer;
+        margin: 0.1rem;
+        background: rgba(64, 16, 106, 1);
+        border: 1px solid rgba(64, 16, 106, 1);
+        border-radius: 0.5rem;
+    }
+    &__btn-edit {
+        cursor: pointer;
+        margin: 0.1rem;
+        background: rgba(64, 16, 106, 1);
+        border: 1px solid rgba(64, 16, 106, 1);
+        border-radius: 0.5rem;
+        
+    }
+    
+}
+//custom radio button
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 3px solid #FF7179;
+    border-radius: 100%;
+    background: rgba(64, 16, 106, 1);
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #FF7179;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+} 
+[type="radio"] + label:hover:before {
+    box-shadow: 0 0 1rem rgba(#FF7179, 0.5);
+}

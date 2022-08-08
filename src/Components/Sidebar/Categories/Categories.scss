@@ -1,0 +1,58 @@
+.categories {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    font-weight: 500;
+    display: grid;
+    gap: 1rem;
+    &__title {
+        cursor: pointer;
+        border-radius: 1rem;
+        background: linear-gradient(to right, #FF7179 50%, transparent 0%);
+        background-size: 210% 100%;
+        background-position: right bottom;
+        transition: all .3s ease-out;
+        padding: 1rem;
+    }
+    &__title:hover {
+        background-position: left bottom;
+    }
+    &__text {
+        font-family: 'Poppins',
+            sans-serif;
+        color: white;
+    }
+    &__button {
+        cursor: pointer;
+        margin: 0.5rem;
+        background-color: white;
+        border: none;
+        color: rgba(64, 16, 106, 1);
+        border-radius: 0.5rem;
+    }
+    &__button:hover {
+        box-shadow: 0 0 1rem rgba(#FF7179, 0.5);
+    }
+    &__button h2 {
+        margin: 0.5rem;
+    }
+    &__input {
+        font-family: 'Poppins';
+        margin: 0.5rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+        background-color: white;
+        border:0.15rem solid rgba(64, 16, 106, 1);
+        box-shadow: 0 0 1rem rgba(#FF7179, 0.5);
+        outline: none;
+        color: black;
+        border-radius: 0.5rem;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.active {
+    color: rgba(64, 16, 106, 1);
+}

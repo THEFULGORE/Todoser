@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.app-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

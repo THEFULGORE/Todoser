@@ -1,0 +1,58 @@
+.todoForm {
+    &__input-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__input {
+        font-family: 'Poppins';
+        font-weight: 500;
+        width: 20rem;
+        height: 1.25rem;
+        padding: 0.5rem;
+        font-size: 500;
+        background-color: rgba(64, 16, 106, 1);
+        border: 0.15rem solid rgba(64, 16, 106, 1);
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+        color: white;
+        border-radius: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    &__input::placeholder {
+        color: rgba(255, 255, 255, 0.747);
+    }
+    &__input:focus {
+        // outline-color: #FF7179;
+        border-color: #FF7179;
+        box-shadow: 0 0 1rem rgba(#FF7179, 0.5);
+        outline: none;
+    }
+    &__button {
+        height: 24px;
+        padding: 0.5rem;
+        background-color: #FF7179;
+        border: 0.15rem solid #FF7179;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        margin-right: 0.5rem;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    }
+    &__button:hover {
+        border-color: #FF7179;
+        box-shadow: 0 0 1rem rgba(#FF7179, 0.5);
+        outline: none;
+    }
+}
+
+.tasks {
+    text-align: center;
+    height: 83vh;
+    overflow: auto;
+    padding: 1rem;
+}
+.goalsList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
